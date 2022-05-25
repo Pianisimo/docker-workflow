@@ -1,0 +1,19 @@
+docker run <image name>
+docker run <image name> <replaced run command>
+docker ps
+docker ps --all
+docker create <image  name>
+docker start -a <container id>  // watch output of container in the terminal
+docker system prune
+docker logs <container id>
+docker stop <container id>
+docker kill <container id>
+docker exec -it <container id> <command to execute in a running container>
+docker build <Dockerfile path>
+docker build -t <dockerhubid/projectname:version/> <Dockerfile path>
+Example: docker build -t pianisimo/intro:latest .
+docker run -p <client port : container port> <image name>
+docker-compose up
+docker-compose up --build
+docker run -p <client port : container port> -v $(pwd):/<docker image path> <image name>
+Example: docker run -p 4200:4200 -v $(pwd):/app b97c5f926c37

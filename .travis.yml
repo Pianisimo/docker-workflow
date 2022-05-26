@@ -10,10 +10,10 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
-  app: "docker-test"
-  env: "Dockertest-env"
+  app: "workflow-test"
+  env: "Workflowtest-env"
   bucket_name: "elasticbeanstalk-us-east-2-771866977691"
-  bucket_path: "docker-test"
+  bucket_path: "workflow-test"
   on:
     branch: master
   access_key_id: $Access_key_ID

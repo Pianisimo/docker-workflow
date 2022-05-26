@@ -5,8 +5,8 @@ services:
 
 before_install:
   - docker build -t pianisimo/docker-workflow -f Dockerfile.dev .
-#script:
-#  -
+script:
+  - ls
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"

@@ -4,17 +4,20 @@ services:
   - docker
 
 before_install:
+#  - TODO build image to install into AWS
+  - docker build -t pianisimo/docker-workflow-dev -f Dockerfile.dev .
   - docker build -t pianisimo/docker-workflow .
 script:
+#  - TODO implement real tests here.
   - ls
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
-  app: "workflow-test"
-  env: "Workflowtest-env"
+  app: "docker-workflow"
+  env: "Dockerworkflow-env"
   bucket_name: "elasticbeanstalk-us-east-2-771866977691"
-  bucket_path: "workflow-test"
+  bucket_path: "docker-workflow"
   on:
     branch: master
   access_key_id: $Access_key_ID
-  secret_access_key: $Secret_access_key
+  secret_access_key: $Secret_access_key"

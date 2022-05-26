@@ -11,5 +11,6 @@ COPY . .
 CMD ["ng", "build"]
 
 FROM nginx:alpine
+EXPOSE 80
 
 COPY --from=builder /app/dist/docker-workflow /usr/share/nginx/html

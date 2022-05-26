@@ -8,7 +8,8 @@ RUN npm install
 
 COPY . .
 
-RUN ["ng", "build"]
+#RUN ng build *CMD won't work with docker in travis ci, use this line and remove below
+CMD ["ng", "build"]
 
 FROM nginx:alpine
 

@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-CMD ["ng", "build"]
+RUN ["ng", "build"]
 
 FROM nginx:alpine
 

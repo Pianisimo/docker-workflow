@@ -16,6 +16,6 @@ deploy:
   bucket_path: "docker-workflow"
   on:
     branch: master
-  access_key_id: "$Access key ID"
+  access_key_id: $Access_key_ID
   secret_access_key:
-    secure: "$Secret Access Key"
+    secure: "$Secret_access_key"
